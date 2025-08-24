@@ -1,0 +1,27 @@
+@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+@import "tailwindcss/utilities";
+
+/* Base styles */
+body {
+  @apply bg-neutral-100 text-neutral-900 transition-colors duration-300;
+  font-family: system-ui, sans-serif;
+}
+
+.dark body {
+  @apply bg-neutral-900 text-neutral-100;
+}
+
+/* Liquid glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
